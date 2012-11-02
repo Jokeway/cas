@@ -184,8 +184,8 @@ public final class SerializableSessionImpl extends AbstractStaticSession impleme
         if (childSessions != null ? !childSessions.equals(that.childSessions) : that.childSessions != null)
             return false;
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (parentSession != null ? !parentSession.equals(that.parentSession) : that.parentSession != null)
-            return false;
+        //if (parentSession != null ? !parentSession.equals(that.parentSession) : that.parentSession != null)
+        //    return false;
         if (state != null ? !state.equals(that.state) : that.state != null) return false;
 
         return true;
@@ -196,11 +196,11 @@ public final class SerializableSessionImpl extends AbstractStaticSession impleme
         int result = parentSession != null ? parentSession.hashCode() : 0;
         result = 31 * result + (id != null ? id.hashCode() : 0);
         result = 31 * result + (invalidate ? 1 : 0);
-        result = 31 * result + (accesses != null ? accesses.hashCode() : 0);
+        //result = 31 * result + (accesses != null ? accesses.hashCode() : 0);
         result = 31 * result + (attributePrincipal != null ? attributePrincipal.hashCode() : 0);
         result = 31 * result + (state != null ? state.hashCode() : 0);
-        result = 31 * result + (childSessions != null ? childSessions.hashCode() : 0);
-        result = 31 * result + (authentications != null ? authentications.hashCode() : 0);
+        //result = 31 * result + (childSessions != null ? childSessions.hashCode() : 0);
+        //result = 31 * result + (authentications != null ? authentications.hashCode() : 0);
         return result;
     }
 }
